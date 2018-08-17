@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C9309DC0210006BD00FC0497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9309DBF210006BD00FC0497 /* AppDelegate.swift */; };
-		C9309DC2210006BD00FC0497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9309DC1210006BD00FC0497 /* ViewController.swift */; };
 		C9309DC5210006BD00FC0497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9309DC3210006BD00FC0497 /* Main.storyboard */; };
 		C9309DC7210006BE00FC0497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9309DC6210006BE00FC0497 /* Assets.xcassets */; };
 		C9309DCA210006BE00FC0497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9309DC8210006BE00FC0497 /* LaunchScreen.storyboard */; };
 		C9309DD5210006BE00FC0497 /* _31WorkoutAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9309DD4210006BE00FC0497 /* _31WorkoutAppTests.swift */; };
 		C9309DE0210006BE00FC0497 /* _31WorkoutAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9309DDF210006BE00FC0497 /* _31WorkoutAppUITests.swift */; };
+		C9673F782106342900B1C4D3 /* RootPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9673F772106342900B1C4D3 /* RootPageViewController.swift */; };
+		C9673F7A210636BE00B1C4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9673F79210636BE00B1C4D3 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		C9309DBC210006BD00FC0497 /* 531WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 531WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9309DBF210006BD00FC0497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9309DC1210006BD00FC0497 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9309DC4210006BD00FC0497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9309DC6210006BE00FC0497 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9309DC9210006BE00FC0497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		C9309DDB210006BE00FC0497 /* 531WorkoutAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 531WorkoutAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9309DDF210006BE00FC0497 /* _31WorkoutAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _31WorkoutAppUITests.swift; sourceTree = "<group>"; };
 		C9309DE1210006BE00FC0497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9673F772106342900B1C4D3 /* RootPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPageViewController.swift; sourceTree = "<group>"; };
+		C9673F79210636BE00B1C4D3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,10 @@
 		C9309DBE210006BD00FC0497 /* 531WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9673F772106342900B1C4D3 /* RootPageViewController.swift */,
 				C9309DBF210006BD00FC0497 /* AppDelegate.swift */,
-				C9309DC1210006BD00FC0497 /* ViewController.swift */,
 				C9309DC3210006BD00FC0497 /* Main.storyboard */,
+				C9673F79210636BE00B1C4D3 /* ViewController.swift */,
 				C9309DC6210006BE00FC0497 /* Assets.xcassets */,
 				C9309DC8210006BE00FC0497 /* LaunchScreen.storyboard */,
 				C9309DCB210006BE00FC0497 /* Info.plist */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9309DC2210006BD00FC0497 /* ViewController.swift in Sources */,
+				C9673F7A210636BE00B1C4D3 /* ViewController.swift in Sources */,
+				C9673F782106342900B1C4D3 /* RootPageViewController.swift in Sources */,
 				C9309DC0210006BD00FC0497 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,14 +434,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8S9R6FCCF6;
 				INFOPLIST_FILE = 531WorkoutApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "VM.-31WorkoutApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.VM.531WorkoutApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2cd83832-7fbc-4b69-bdbb-105ad2e7cc24";
+				PROVISIONING_PROFILE_SPECIFIER = 531Workout;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,14 +456,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8S9R6FCCF6;
 				INFOPLIST_FILE = 531WorkoutApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "VM.-31WorkoutApp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.VM.531WorkoutApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0bb84d7f-93ad-4710-ae23-36830ccc5aa3";
+				PROVISIONING_PROFILE_SPECIFIER = 531WorkoutApp;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
